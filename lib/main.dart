@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(home: const MyApp()));
+  runApp(MaterialApp(
+      theme: ThemeData(
+          iconTheme: IconThemeData(color: Colors.pinkAccent),
+          appBarTheme: AppBarTheme(
+              color: Colors.pink[50],
+              actionsIconTheme: IconThemeData(color: Colors.pink)),
+          textTheme: TextTheme(
+            headline6: TextStyle(color: Colors.blue), // AppBar()
+            bodyText1: TextStyle(color: Colors.green), // 다른 모든 위젯
+            bodyText2: TextStyle(color: Colors.red), // Text()
+            button: TextStyle(color: Colors.blue), // TextButton()
+            subtitle1: TextStyle(color: Colors.blue), // ListTile()
+          )),
+      home: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
