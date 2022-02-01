@@ -1,16 +1,23 @@
-# insta
+### 페이지 나누려면 두세가지 방법이 있다.
 
-A new Flutter project.
+navigator, router, tab, ....
 
-## Getting Started
+- tab이 가장 간단하고 쉽다
 
-This project is a starting point for a Flutter application.
+tab으로 페이지를 나누는 방법은
 
-A few resources to get you started if this is your first Flutter project:
+- 미리 페이지를 다 만들어두고 탭을 눌렀을 때 보여주기만 하면 된다.
+- TabBar 위젯도 있긴 한데, 커스터마이징이 어려우니까 직접 만들어보자.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<br/>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 동적인 UI를 혼자서 만들려면 3-step이 필요하다
+
+탭이 아니어도, 동적인 UI를 만들고 싶으면 위 3step을 거치자.
+
+1. state를 만들고 현재 UI의 상태를 저장
+   - state에 tab 현재 상태를 저장하는데, 지금 몇번째 페이지가 보이고 있는지 그런 거
+2. state에 따라서 현재 UI가 어떻게 보일지 지정
+   - 예를 들어, state가 0이면 첫번째 페이지, 1이면 두번째 페이지를 보여준다는 느낌
+3. 유저가 state를 조작할 수 있게 개발
+   - 누르면 state가 바뀌는 버튼을 추가한다던지 하면 된다.
