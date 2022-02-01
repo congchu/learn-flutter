@@ -11,17 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Instagram"),
-          actions: [
-            IconButton(
-              icon: Icon(Icons.add_box_outlined),
-              onPressed: () {},
-              iconSize: 30,
-            )
-          ],
-          centerTitle: false,
-        ),
+      appBar: AppBar(
+        title: Text("Instagram"),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.add_box_outlined),
+            onPressed: () {},
+            iconSize: 30,
+          )
+        ],
+        centerTitle: false,
+      ),
       body: Text("테스트 데이터"),
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
