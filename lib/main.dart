@@ -13,6 +13,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  var _tab = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,10 +29,15 @@ class _MyAppState extends State<MyApp> {
         ],
         centerTitle: false,
       ),
-      body: Text("테스트 데이터"),
+      body: [Text("홈 페이지"), Text("샵 페이지")][_tab],
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
         showUnselectedLabels: false,
+        onTap: (i) {
+          setState(() {
+            _tab = i;
+          });
+        },
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: "홈"),
           BottomNavigationBarItem(
