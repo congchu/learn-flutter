@@ -22,9 +22,16 @@ class MyApp extends StatelessWidget {
           ],
           centerTitle: false,
         ),
-        body: TextButton(
-          onPressed: () {},
-          child: Text("버튼이지롱"),
-        ));
+      body: Text("테스트 데이터"),
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: "홈"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_bag_outlined), label: "샵"),
+        ],
+      ),
+    );
   }
 }

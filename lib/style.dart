@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 // TIP: 변수를 다른 파일에서 쓸 일이 없으면 변수명 앞에 _ 붙이기
 
 var theme = ThemeData(
+    bottomNavigationBarTheme:
+        BottomNavigationBarThemeData(selectedItemColor: Colors.pink[400]),
     // 모든 버튼 한꺼번에 스타일 주고 싶으면
     textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(backgroundColor: Colors.grey)),
